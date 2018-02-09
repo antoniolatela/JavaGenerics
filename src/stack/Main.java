@@ -6,11 +6,19 @@ public class Main {
     public static void main(String[] args) {
         Stack<Integer> s = new StackList<>();
         Stack<String> ss = new StackList<>();
-        ss.push("uno");
-        ss.push("due");
-        ss.push("tre");
-        System.out.println(ss);
-        System.out.println(ss.pop() +" "+ ss.toString());
+        s.push(1);
+        s.push(2);
+        s.push(3);
+        s.push(4);
+
+        System.out.println(s.size());
+        System.out.println(s.toString());
+
+        s.pop();
+        System.out.println(s.size());
+        System.out.println(s);
+        //System.out.println(ss.pop() +" "+ ss.toString());
+        //ss.pusha(2);
 
 
 
