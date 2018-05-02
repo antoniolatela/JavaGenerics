@@ -13,7 +13,16 @@ public class GenericArray {
             }
     }
 
+    public static int contaFinoA100(int i) {
+        if (i<10000){
+            return contaFinoA100(i+1);
+        } else {
+            return i;
+        }
+    }
+
     public static void main(String[] args) {
+        System.out.println(contaFinoA100(1));
         Integer[] a = new Integer[]{1,2,3,4,5,6,7,8,9,10};
         printList(a);
         String[] s = new String[]{"a","b","c"};

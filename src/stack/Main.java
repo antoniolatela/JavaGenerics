@@ -1,22 +1,18 @@
 package stack;
 
-import java.util.Iterator;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class Main {
-    public static void main(String[] args) {
-        Stack<Integer> s = new StackList<>();
+    public static void main(String[] args) throws Exception {
+        Stack<Number> s = new StackList<>();
         Stack<String> ss = new StackList<>();
-        s.push(1);
-        s.push(2);
-        s.push(3);
-        s.push(4);
+        Stack<Double> d = new StackList<>();
+        ss.push("u");
 
-        System.out.println(s.size());
-        System.out.println(s.toString());
+        Collection c = new ArrayList();
 
-        s.pop();
-        System.out.println(s.size());
-        System.out.println(s);
+
         //System.out.println(ss.pop() +" "+ ss.toString());
         //ss.pusha(2);
 

@@ -1,11 +1,18 @@
 package stack;
 
+import java.util.Collection;
+
 public class StackList<T> implements Stack<T> {
     private Object[] o;
 
     StackList() {
         o = new Object[0];
     }
+
+    public void pushAll(Collection<? extends T> stack) {
+        for (T t:stack) push(t);
+    }
+
 
     //@Override
     public void push(T t) {
@@ -19,6 +26,7 @@ public class StackList<T> implements Stack<T> {
 
     @Override
     public T pop() {
+        if (o.length == 0) throw new IndexOutOfBoundsException("No pop() from empty Stack.");
         T t = (T)o[o.length-1];
         Object[] z = new Object[o.length-1];
         for(int i = 0; i<o.length-1; i++) {
